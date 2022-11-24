@@ -13,11 +13,11 @@
 <th>DESIGNATION</th>
 </tr>
 <%
-List<employee> ll = empdao.show();
+	List<employee> ll = empdao.show();
 int len = ll.size();
 for(int i=0;i<len;i++)
 {
-	%>
+%>
 	<tr>
 <th><%=ll.get(i).getEID() %></th>
 <th><%=ll.get(i).getEName() %></th>

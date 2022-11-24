@@ -1,4 +1,4 @@
-
+<%@ page import="java.util.List" %>
 <%@ page import="rahul.*" %>
 <%
 int idd = Integer.parseInt(request.getParameter("id"));
@@ -8,14 +8,14 @@ if(idd == 0)
 	%>
 	<jsp:include page="index.jsp" />
 	<%
-}
-else
-{
-	
+		}
+	else
+	{
+		
 
-employee emp = empdao.search(idd);
-if(emp == null)
-{
+	employee em = empdao.search(idd);
+	if(em == null)
+	{
 	%>
 	<jsp:include page="index.jsp" />
 	<h1>RECORD NOT FOUND</h1>
@@ -26,11 +26,11 @@ else
 {
 	
 
-int id = emp.getEID();
-String name = emp.getEName();
-String doj = emp.getDOJ();
-String yoe = emp.getYOE();
-String des=emp.getDesignation();
+int id = em.getEID();
+String name = em.getEName();
+String doj = em.getDOJ();
+String yoe = em.getYOE();
+String des=em.getDesignation();
 
 
 
